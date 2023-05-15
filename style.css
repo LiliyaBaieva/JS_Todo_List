@@ -22,3 +22,19 @@
     cursor: pointer;
 }
 
+ul{
+    list-style-type: none;
+    width: 58%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+}
+
+li span{
+    width: 300px;
+}
+
