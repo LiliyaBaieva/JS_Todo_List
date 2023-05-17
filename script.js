@@ -1,9 +1,23 @@
 const task = document.getElementById('taskInput');
-const addTaskButton = document.getElementById('addTask');
+// const addTaskButton = document.getElementById('addTask');
 const taskListul = document.getElementById('taskList');
 const checkbox = document.getElementById('checkbox');
+// получаем форму по селектору
+const form = document.querySelector("#form");
 
-addTaskButton.addEventListener('click', addTask);
+// вешаем обработчик события на форму
+form.addEventListener('submit', (e) => {
+    // e.preventDefault() нужен чтоб отменить поведение формы по умолчанию
+    e.preventDefault();
+    addTask();
+  })
+// addTaskButton.addEventListener('click', addTask);
+// addTaskButton.addEventListener('keydown', (e) => {
+//     if(e.key = 'Enter'){
+//         addTask;
+//     }
+// })
+
 taskListul.addEventListener('click', (e) => {
     // console.log(e.target);
     if(e.target.tagName === 'BUTTON'){
@@ -30,5 +44,15 @@ function addTask(){
 
 
 
+
+
+
+
+// addTaskButton.addEventListener('click', addTask);
+// addTaskButton.addEventListener('keydown', (e) => {
+//     if(e.key = 'Enter'){
+//         addTask;
+//     }
+// })
 
 
